@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- CDN do Bootstrap 4.4.1 -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+        <!-- CSS customizado #NGJ -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/custom.css')}}">
+
+        <!-- Fontes Personalizadas -->
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+
+        <!-- Blocos Title e Head Reutilizáveis por meio de Jinja Templates -->
+        {% block title %}
+        {% endblock %}
+
+        {% block head %}
+        {% endblock %}
+
+    </head>
+    <body style="background-color: {% if bg_color %}{{bg_color}};{% else %}white;{% endif %}">
+
+        <!-- Bloco Body Reutilizável por meio de Jinja Templates -->
+        {% block body %} {% endblock %}
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

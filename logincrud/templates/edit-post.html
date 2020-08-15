@@ -1,0 +1,36 @@
+{% extends 'components/base.html' %} <!-- Importando o documento 'base.html' como template base. -->
+
+        {% block title %} <title>Novo Post</title> {% endblock %}
+
+    {% include 'components/nav.html' %}
+
+        {% block body %} <!-- Informações serão renderizadas dentro de 'base.html' -->
+
+<form action="" method="post">
+
+   <div class="card card-new-post card-30">
+      <div class="card-body">
+         <H5 class="h3form">Editar Post {{post.title}}</H5>
+         <hr>
+         <div>
+             <label for="title">Titulo</label>
+             <input type="text" class="form-control" value="{{post.title}}" name="title">
+         </div>
+         <div  style="margin-top: 15px;">
+             <label for="content">Conteúdo</label>
+             <textarea type="text" class="form-control" name="content">{{post.content}}</textarea>
+         </div>
+         <div style="margin-top: 15px;">
+             <label for="tags">Conteúdo</label>
+             <input type="textarea" class="form-control" value="{{post.tags_string}}" name="tags">
+         </div>
+          <hr>
+          <div style="margin-top: 15px;">
+            <input type="submit" class="form-control bg-one-color text-white" value="Salvar">
+         </div>
+   </div>
+</form>
+
+
+
+        {% endblock %}

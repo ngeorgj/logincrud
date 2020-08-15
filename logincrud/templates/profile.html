@@ -1,0 +1,19 @@
+{% extends 'components/base.html' %} <!-- Importando o documento 'base.html' como template base. -->
+{% block title %}
+<title>MyBlogSpace</title>
+{% endblock %}
+{% include 'components/nav.html' %}
+{% block body %} <!-- Informações serão renderizadas dentro de 'base.html' -->
+<div class="container-fluid">
+   <div class="row  card-body">
+      <div class="col-3">
+         {% include 'components/profile/profile-user.html' %}
+      </div>
+      <div class="col-8">
+         <div class="container-fluid">
+     {% include 'components/profile/profile-posts.html' %}
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

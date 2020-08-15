@@ -1,0 +1,28 @@
+{% extends 'components/base.html' %} <!-- Importando o documento 'base.html' como template base. -->
+
+        {% block title %} <title>Blog</title> {% endblock %}
+
+    {% include 'components/nav.html' %}
+
+        {% block body %} <!-- Informações serão renderizadas dentro de 'base.html' -->
+        
+        <div class="col-md-8 blog-main card card-body top-15 left-15">
+          <h3 class="pb-3 mb-4 font-italic border-bottom ">
+            Posts com a Tag #{{tag}}
+          </h3>
+            {% for post in posts %}
+          <div class="blog-post">
+            <h2 class="blog-post-title">{{post.title}}</h2>
+            <p class="blog-post-meta">{{post.timestamp}} por <a href="/Blog/{{post.author_username}}">{{post.author}}</a></p>
+
+            <p>{{post.content}}</p>
+          </div><!-- /.blog-post -->
+            {% endfor %}
+
+        </div>
+
+
+
+
+
+        {% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'components/base.html' %} <!-- Importando o documento 'base.html' como template base. -->
+{% block title %}
+<title>Login</title>
+{% endblock %}
+{% block body %} <!-- Informações serão renderizadas dentro de 'base.html' -->
+
+<form action="" method="post">
+        {{ form.csrf_token }}
+   <div class="card card-login card-30">
+      <div class="card-body">
+         <H3 class="h3form">Logar</H3>
+         <hr>
+         <div id="usr">
+            {{ form.username.label }}
+            {{ form.username(class_="form-control") }}
+         </div>
+         <div id="pwd" style="margin-top: 15px;">
+            {{ form.password.label }}
+            {{ form.password(class_="form-control") }}
+         </div>
+         <p class="not-registered top-15">Ainda não é membro? Clique <a href="/Registrar">Aqui</a>!</p>
+         <div class="row">
+            <div class="col-4">
+               <div id="rmb" class="">
+                  {{ form.remember.label }}
+                  {{ form.remember }}
+               </div>
+            </div>
+            <div class="col-8">
+               <div id="sbm" class="float-right">
+                  {{ form.submit(class_="btn btn-info") }}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</form>
+
+{% endblock %}

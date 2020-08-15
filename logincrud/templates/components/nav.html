@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md bg-one-color">
+  <a class="" href="/"><img src="{{url_for('static', filename='img/CRUD.png')}}" class="img-logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse left-15" id="navbar1">
+    <ul class="navbar-nav mr-auto ">
+        <li class="nav-item">
+        <a class="nav-link font-link-white" href="/Blog">Posts</a>
+        </li>
+      {% with messages = get_flashed_messages() %}
+           {% if messages %}
+
+               <li class="nav-item " style="margin-left: 250px;">
+                 <a class="nav-link font-link-white text-center">
+                  {{ messages[0] | safe }}
+                 </a>
+</li>
+           {% endif %}
+         {% endwith %}
+    </ul>
+    <form class="form-inline my-2 my-md-0">
+      {% if current_user.is_authenticated %}
+        <a class="btn text-white" href="/Blog/{{current_user.username}}">{{current_user.greetings}}</a>
+        <a class="btn btn-outline-danger left-8"  href="/Logout">Sair</a>
+      {% else %}
+        <a class="btn btn-info" href="/Login">Login</a>
+        <a class="btn btn-outline-info left-8"  href="/Registrar">Registrar</a>
+      {% endif %}
+
+    </form>
+  </div>
+</nav>

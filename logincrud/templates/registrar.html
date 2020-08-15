@@ -1,0 +1,54 @@
+{% extends 'components/base.html' %} <!-- Importando o documento 'base.html' como template base. -->
+{% block title %}
+<title>Cadastro</title>
+{% endblock %}
+{% block body %} <!-- Informações serão renderizadas dentro de 'base.html' -->
+<form action="" method="post">
+   {{ form.csrf_token }}
+
+   <div class="card card-register card-30">
+
+      <div class="card-body">
+          <H3 class="h3form">Cadastro</H3>
+         <hr>
+         <div class="form-field">
+            {{ form.nome.label }}
+            {{ form.nome(class_="form-control") }}
+         </div>
+         <div class="form-field">
+            {{ form.sobrenome.label }}
+            {{ form.sobrenome(class_="form-control") }}
+         </div>
+         <div class="form-field">
+            {{ form.mobile.label }}
+            {{ form.mobile(class_="form-control") }}
+         </div>
+         <div class="form-field">
+            {{ form.email.label }}
+            {{ form.email(class_="form-control") }}
+         </div>
+         <div class="form-field">
+            {{ form.username.label }}
+            {{ form.username(class_="form-control") }}
+         </div>
+         <div class="form-field">
+            {{ form.password.label }}
+            {{ form.password(class_="form-control") }}
+         </div>
+         <div class="form-field">
+            {{ form.confirm.label }}
+            {{ form.confirm(class_="form-control") }}
+         </div>
+         <hr>
+
+         <div class="form-field">
+
+            {{ form.submit(class_="btn btn-outline-info float-right") }}
+            <p class="not-registered">Já é membro? Clique <a href="/Login">Aqui!</a></p>
+         </div>
+
+         </div>
+   </div>
+</form>
+
+{% endblock %}

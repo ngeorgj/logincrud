@@ -1,0 +1,32 @@
+{% extends 'components/base.html' %} <!-- Importando o documento 'base.html' como template base. -->
+
+        {% block title %} <title>Admin</title> {% endblock %}
+
+    {% include 'components/admin-nav.html' %}
+
+        {% block body %} <!-- Informações serão renderizadas dentro de 'base.html' -->
+
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Author</th>
+      <th scope="col">Title</th>
+      <th scope="col">Tags</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for post in posts %}
+    <tr>
+      <th scope="row">{{post.id}}</th>
+      <td>{{post.author}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.tags_string}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+
+
+        {% endblock %}

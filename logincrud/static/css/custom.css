@@ -1,0 +1,192 @@
+:root {                                          /* Cores retiradas da Paleta Anexa Origem: https://colorhunt.co/ */
+  --one-color: #1b262c;
+  --two-color: #0f4c75;
+  --three-color: #3282b8;
+  --four-color: #bbe1fa;
+}
+* {
+    transition: all .3s;
+}
+body {
+ font-family: 'Work Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Crimson Text', serif;
+}
+
+.brand-three {
+    color: var(--three-color) !important;
+}
+
+.text-one-color {
+    color: var(--one-color);
+}
+
+.bg-one-color {
+    background-color: var(--one-color);
+}
+
+.bg-four-color {
+    background-color: var(--four-color);
+}
+
+.font-link-white {
+    color: white !important;
+}
+
+.not-registered {
+    font-size: 12px;
+    color: black;
+}
+
+.font-link-white:hover {
+    color: var(--four-color) !important;
+}
+
+.nav-link-custom {
+    color: white !important;
+
+}
+
+.nav-link-custom:hover {
+    color:
+}
+
+.top-15 {
+    margin-top: 15px;
+}
+
+.left-15 {
+    margin-left: 15px;
+}
+
+.left-8 {
+    margin-left: 8px;
+}
+
+.right-15 {
+    margin-right: 15px;
+}
+
+.bottom-15 {
+    margin-bottom: 15px;
+}
+
+.form-field {
+    margin-top: 5px;
+}
+
+.h3form {
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+
+/* POSTS */
+
+.post-box {
+    padding: 3px;
+    background-color: white;
+        transition: all .2s;
+
+}
+
+.post-box:hover {
+    margin-left: 5px;
+    background-color: #00000005;
+    box-shadow: 0px 0px 5px inset #00000015;
+    color: black;
+    transition: all .2s;
+
+}
+
+.post-title {
+    font-family: 'Lato', sans-serif;
+
+    font-weight: 400;
+    margin-top: -10px;
+    font-size: 22px;
+    margin-bottom: -12px;
+
+}
+
+.post-content {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+.post-content:hover {
+    margin-left: 10px;
+
+}
+
+.post-tag {
+
+    margin-top: -17px;
+    margin-left: 3px;
+    font-size: 10px;
+
+}
+
+.absolute {
+    position: absolute;
+    top: 10px;
+}
+
+.profile-image {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.post-tag:hover {
+    font-size:13px;
+
+}
+
+.post-author {
+    font-family: 'Lato', sans-serif;
+    margin-top: -12px;
+    font-size: 13px;
+}
+
+
+
+/* CARDS */
+
+.card-30 {
+    width: 30%;
+}
+
+.card-login {
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+
+.card-new-post {
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.card-register {
+    margin: 0 auto;
+    margin-top: 1%;
+    color: var(--one-color) !important;
+}
+
+.img-logo {
+    height: 35px;
+    width: auto;
+}
+
+/* Usuário */
+
+.card-usuario {
+    padding: 5px;
+    color: black !important;
+}

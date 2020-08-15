@@ -1,0 +1,36 @@
+{% extends 'components/base.html' %} <!-- Importando o documento 'base.html' como template base. -->
+
+        {% block title %} <title>Novo Post</title> {% endblock %}
+
+    {% include 'components/nav.html' %}
+
+        {% block body %} <!-- Informações serão renderizadas dentro de 'base.html' -->
+
+<form action="" method="post">
+        {{ form.csrf_token }}
+   <div class="card card-new-post card-30">
+      <div class="card-body">
+         <H3 class="h3form">Novo Post</H3>
+         <hr>
+         <div>
+            {{ form.title.label }}
+            {{ form.title(class_="form-control") }}
+         </div>
+         <div  style="margin-top: 15px;">
+            {{ form.content.label }}
+            {{ form.content(class_="form-control") }}
+         </div>
+         <div style="margin-top: 15px;">
+            {{ form.tags.label }}
+            {{ form.tags(class_="form-control") }}
+         </div>
+          <hr>
+          <div style="margin-top: 15px;">
+            {{ form.submit(class_="form-control bg-one-color text-white") }}
+         </div>
+   </div>
+</form>
+
+
+
+        {% endblock %}
